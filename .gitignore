@@ -1,6 +1,19 @@
-# Ignore build outputs from performing a nix-build or `nix build` command
+# Nix
 result
 result-*
-
-# Ignore automatically generated direnv output
 .direnv
+
+# Editor
+.vscode
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+__pycache__
+packages/wrapBuddy/compile_commands.json
+packages/wrapBuddy/.cache/clangd
+
+# Rust build artifacts
+target/
