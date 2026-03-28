@@ -5,6 +5,16 @@
 ### Utilities
 
 <details>
+<summary><strong>click-odoo</strong> - Beautiful, robust CLI for Odoo</summary>
+
+- **Source**: source
+- **License**: LGPL-3.0-or-later
+- **Homepage**: https://github.com/acsone/click-odoo
+- **Usage**: `nix run github:oduit/oduit.nix#click-odoo -- --help`
+- **Nix**: [packages/click-odoo/package.nix](packages/click-odoo/package.nix)
+
+</details>
+<details>
 <summary><strong>manifestoo</strong> - Tool to reason about Odoo addons manifests</summary>
 
 - **Source**: source
