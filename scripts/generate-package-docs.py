@@ -53,9 +53,7 @@ def generate_package_doc(package: str, metadata: dict[str, str | bool | None]) -
     if homepage:
         lines.append(f"- **Homepage**: {homepage}")
 
-    lines.append(
-            f"- **Usage**: `nix run github:oduit/oduit.nix#{package} -- --help`"
-    )
+    lines.append(f"- **Usage**: `nix run github:oduit/oduit.nix#{package} -- --help`")
     lines.append(
         f"- **Nix**: [packages/{package}/package.nix](packages/{package}/package.nix)"
     )
@@ -75,6 +73,9 @@ def generate_package_doc(package: str, metadata: dict[str, str | bool | None]) -
 
 # Define category order for display
 CATEGORY_ORDER = [
+    "Testing",
+    "Packaging",
+    "LSP",
     "Utilities",
     "Uncategorized",
 ]
@@ -88,7 +89,9 @@ def generate_all_docs() -> str:
     by_category: dict[str, list[tuple[str, dict]]] = {}
     for package in sorted(all_metadata.keys()):
         metadata = all_metadata[package]
-        category = metadata.get("category", "Uncategorized")
+        category = metadata.get("category")
+        if not isinstance(category, str):
+            category = "Uncategorized"
         if category not in by_category:
             by_category[category] = []
         by_category[category].append((package, metadata))

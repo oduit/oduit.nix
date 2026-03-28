@@ -36,7 +36,7 @@ python3Packages.buildPythonApplication rec {
     runHook postInstallCheck
   '';
 
-  passthru.category = "Utilities";
+  passthru.category = "Packaging";
 
   meta = with lib; {
     description = "Build backend and CLI for Odoo addons";

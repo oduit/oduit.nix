@@ -2,6 +2,29 @@
 
 <!-- BEGIN GENERATED PACKAGE DOCS -->
 
+### Packaging
+
+<details>
+<summary><strong>dob</strong> - Project scaffold for bootstrapping Odoo instances with Docker Compose</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/initOS/dob
+- **Usage**: `nix run github:oduit/oduit.nix#dob -- --help`
+- **Nix**: [packages/dob/package.nix](packages/dob/package.nix)
+
+</details>
+<details>
+<summary><strong>whool</strong> - Build backend and CLI for Odoo addons</summary>
+
+- **Source**: source
+- **License**: MIT
+- **Homepage**: https://github.com/sbidoul/whool
+- **Usage**: `nix run github:oduit/oduit.nix#whool -- --help`
+- **Nix**: [packages/whool/package.nix](packages/whool/package.nix)
+
+</details>
+
 ### Utilities
 
 <details>
@@ -12,6 +35,16 @@
 - **Homepage**: https://github.com/acsone/click-odoo
 - **Usage**: `nix run github:oduit/oduit.nix#click-odoo -- --help`
 - **Nix**: [packages/click-odoo/package.nix](packages/click-odoo/package.nix)
+
+</details>
+<details>
+<summary><strong>doblib</strong> - Management tool for Odoo installations</summary>
+
+- **Source**: source
+- **License**: Apache-2.0
+- **Homepage**: https://github.com/initOS/dob-lib
+- **Usage**: `nix run github:oduit/oduit.nix#doblib -- --help`
+- **Nix**: [packages/doblib/package.nix](packages/doblib/package.nix)
 
 </details>
 <details>
@@ -52,16 +85,6 @@
 - **Homepage**: https://github.com/oduit/oduit
 - **Usage**: `nix run github:oduit/oduit.nix#oduit -- --help`
 - **Nix**: [packages/oduit/package.nix](packages/oduit/package.nix)
-
-</details>
-<details>
-<summary><strong>whool</strong> - Build backend and CLI for Odoo addons</summary>
-
-- **Source**: source
-- **License**: MIT
-- **Homepage**: https://github.com/sbidoul/whool
-- **Usage**: `nix run github:oduit/oduit.nix#whool -- --help`
-- **Nix**: [packages/whool/package.nix](packages/whool/package.nix)
 
 </details>
 <!-- END GENERATED PACKAGE DOCS -->
