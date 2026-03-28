@@ -52,7 +52,7 @@ rustPlatform.buildRustPackage rec {
     changelog = "https://github.com/Desdaemon/odoo-lsp/releases/tag/${version}";
     license = licenses.mit;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ Bad3r ];
+    maintainers = with flake.lib.maintainers; [ sbidoul ];
     mainProgram = "odoo-lsp";
     platforms = platforms.unix;
   };

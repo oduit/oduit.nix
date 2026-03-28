@@ -12,19 +12,19 @@
 }:
 
 let
-  version = "1.2.0";
+  version = "1.2.1";
 
   src = fetchFromGitHub {
     owner = "odoo";
     repo = "odoo-ls";
     rev = version;
-    hash = "sha256-pUXBv2oy/tymyM0szZFLaDOWmrd0EjFNxRPwP36khM4=";
+    hash = "sha256-+nx5N3ImjrNDnvgHt/6Vcyw8IBgz9qJQDu2OV9il6xA=";
     fetchSubmodules = true;
   };
 
   configSchema = fetchurl {
     url = "https://github.com/odoo/odoo-ls/releases/download/${version}/config_schema.json";
-    hash = "sha256-F6kfyhhrDYNAOXAJ/BgGF8HeisqxpssatZrlwHOlYig=";
+    hash = "sha256-O5BhiQ1OTUWe4vrXXN4XxunE7tvaesxcC38ax6Q1tEc=";
   };
 in
 rustPlatform.buildRustPackage rec {
@@ -35,6 +35,9 @@ rustPlatform.buildRustPackage rec {
   buildAndTestSubdir = "server";
 
   postPatch = ''
+    substituteInPlace server/Cargo.toml \
+      --replace-fail 'version = "1.2.0"' 'version = "${version}"'
+
     install -m644 ${./Cargo.lock} server/Cargo.lock
   '';
 
@@ -196,7 +199,7 @@ rustPlatform.buildRustPackage rec {
     changelog = "https://github.com/odoo/odoo-ls/releases/tag/${version}";
     license = licenses.lgpl3Only;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ Bad3r ];
+    maintainers = with flake.lib.maintainers; [ sbidoul ];
     mainProgram = "odoo_ls_server";
     platforms = platforms.unix;
   };

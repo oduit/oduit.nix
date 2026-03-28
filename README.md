@@ -129,6 +129,39 @@ All packages support:
 - `aarch64-darwin`
 
 
+## Update Packages
+
+### odoo-ls
+
+`odoo-ls` uses a checked-in `Cargo.lock` plus a separately fetched release asset, so the update is manual.
+
+```bash
+# 1) Prefetch the upstream source with submodules
+nix run nixpkgs#nix-prefetch-github -- odoo odoo-ls --rev 1.2.1 --fetch-submodules
+
+# 2) Prefetch the release config schema
+nix store prefetch-file https://github.com/odoo/odoo-ls/releases/download/1.2.1/config_schema.json
+
+# 3) Regenerate the Rust lockfile from the release tag
+tmp="$(mktemp -d)"
+git clone --depth 1 --branch 1.2.1 https://github.com/odoo/odoo-ls "$tmp"
+cargo generate-lockfile --manifest-path "$tmp/server/Cargo.toml"
+cp "$tmp/server/Cargo.lock" packages/odoo-ls/Cargo.lock
+rm -rf "$tmp"
+
+# 4) Update version and hashes in packages/odoo-ls/package.nix
+
+# 5) Build and copy any new cargoLock.outputHashes printed by Nix
+nix build --accept-flake-config 'path:.#odoo-ls'
+```
+
+Update these fields in `packages/odoo-ls/package.nix`:
+
+- `version`
+- `src.hash`
+- `configSchema.hash`
+- `cargoLock.outputHashes` if the build reports new values
+
 ## Contributing
 
 Contributions are welcome! Please:
