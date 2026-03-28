@@ -2,6 +2,39 @@
 
 <!-- BEGIN GENERATED PACKAGE DOCS -->
 
+### Testing
+
+<details>
+<summary><strong>pylint-odoo</strong> - Pylint plugin and wrapper for Odoo codebases</summary>
+
+- **Source**: source
+- **License**: AGPL-3.0-only
+- **Homepage**: https://github.com/OCA/pylint-odoo
+- **Usage**: `nix run github:oduit/oduit.nix#pylint-odoo -- --help`
+- **Nix**: [packages/pylint-odoo/package.nix](packages/pylint-odoo/package.nix)
+
+</details>
+<details>
+<summary><strong>pytest-odoo</strong> - pytest wrapper for running Odoo tests with pytest-odoo</summary>
+
+- **Source**: source
+- **License**: AGPL-3.0-only
+- **Homepage**: https://github.com/camptocamp/pytest-odoo
+- **Usage**: `nix run github:oduit/oduit.nix#pytest-odoo -- --help`
+- **Nix**: [packages/pytest-odoo/package.nix](packages/pytest-odoo/package.nix)
+
+</details>
+<details>
+<summary><strong>pytest-oduit</strong> - pytest wrapper for running Odoo tests with pytest-oduit</summary>
+
+- **Source**: source
+- **License**: AGPL-3.0-only
+- **Homepage**: https://github.com/oduit/pytest-oduit
+- **Usage**: `nix run github:oduit/oduit.nix#pytest-oduit -- --help`
+- **Nix**: [packages/pytest-oduit/package.nix](packages/pytest-oduit/package.nix)
+
+</details>
+
 ### Packaging
 
 <details>
