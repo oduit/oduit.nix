@@ -6,6 +6,10 @@ inputs.nixpkgs.lib.extend (
         github = "sbidoul";
         name = "sbidoul";
       };
+      HolgerNahrstaedt = {
+        github = "HolgerNahrstaedt";
+        name = "HolgerNahrstaedt";
+      };
     };
   }
 )

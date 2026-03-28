@@ -5,6 +5,16 @@
 ### Utilities
 
 <details>
+<summary><strong>manifestoo</strong> - Tool to reason about Odoo addons manifests</summary>
+
+- **Source**: source
+- **License**: MIT
+- **Homepage**: https://github.com/acsone/manifestoo
+- **Usage**: `nix run github:oduit/oduit.nix#manifestoo -- --help`
+- **Nix**: [packages/manifestoo/package.nix](packages/manifestoo/package.nix)
+
+</details>
+<details>
 <summary><strong>odoo-ls</strong> - Odoo language server built from source</summary>
 
 - **Source**: source
@@ -22,6 +32,16 @@
 - **Homepage**: https://github.com/Desdaemon/odoo-lsp
 - **Usage**: `nix run github:oduit/oduit.nix#odoo-lsp -- --help`
 - **Nix**: [packages/odoo-lsp/package.nix](packages/odoo-lsp/package.nix)
+
+</details>
+<details>
+<summary><strong>oduit</strong> - CLI and library for running, updating, installing, and testing Odoo modules</summary>
+
+- **Source**: source
+- **License**: MPL-2.0
+- **Homepage**: https://github.com/oduit/oduit
+- **Usage**: `nix run github:oduit/oduit.nix#oduit -- --help`
+- **Nix**: [packages/oduit/package.nix](packages/oduit/package.nix)
 
 </details>
 <!-- END GENERATED PACKAGE DOCS -->

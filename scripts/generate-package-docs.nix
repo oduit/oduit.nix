@@ -1,5 +1,5 @@
 let
-  flake = builtins.getFlake (toString ./..);
+  flake = builtins.getFlake "path:${toString ./..}";
   packages = builtins.attrNames (flake.packages.x86_64-linux);
 
   extractMetadata =
