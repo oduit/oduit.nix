@@ -1,0 +1,25 @@
+name: README Check
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  readme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          nix_path: nixpkgs=channel:nixos-unstable
+          extra_nix_config: |
+            extra-experimental-features = nix-command flakes
+            accept-flake-config = true
+      - name: Regenerate README package docs
+        run: python3 ./scripts/generate-package-docs.py
+      - name: Check for uncommitted README changes
+        run: git diff --exit-code -- README.md
