@@ -44,6 +44,16 @@
 - **Nix**: [packages/oduit/package.nix](packages/oduit/package.nix)
 
 </details>
+<details>
+<summary><strong>whool</strong> - Build backend and CLI for Odoo addons</summary>
+
+- **Source**: source
+- **License**: MIT
+- **Homepage**: https://github.com/sbidoul/whool
+- **Usage**: `nix run github:oduit/oduit.nix#whool -- --help`
+- **Nix**: [packages/whool/package.nix](packages/whool/package.nix)
+
+</details>
 <!-- END GENERATED PACKAGE DOCS -->
 
 ## Installation
