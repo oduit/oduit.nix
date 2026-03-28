@@ -1,6 +1,29 @@
 ## Available Tools
 
 <!-- BEGIN GENERATED PACKAGE DOCS -->
+
+### Utilities
+
+<details>
+<summary><strong>odoo-ls</strong> - Odoo language server built from source</summary>
+
+- **Source**: source
+- **License**: LGPL-3.0-only
+- **Homepage**: https://github.com/odoo/odoo-ls
+- **Usage**: `nix run github:oduit/oduit.nix#odoo-ls -- --help`
+- **Nix**: [packages/odoo-ls/package.nix](packages/odoo-ls/package.nix)
+
+</details>
+<details>
+<summary><strong>odoo-lsp</strong> - Language server for Odoo Python, JavaScript, and XML</summary>
+
+- **Source**: source
+- **License**: MIT
+- **Homepage**: https://github.com/Desdaemon/odoo-lsp
+- **Usage**: `nix run github:oduit/oduit.nix#odoo-lsp -- --help`
+- **Nix**: [packages/odoo-lsp/package.nix](packages/odoo-lsp/package.nix)
+
+</details>
 <!-- END GENERATED PACKAGE DOCS -->
 
 ## Installation
