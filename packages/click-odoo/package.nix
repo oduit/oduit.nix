@@ -33,7 +33,6 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/acsone/click-odoo/releases/tag/${version}";
     license = licenses.lgpl3Plus;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ sbidoul ];
     mainProgram = "click-odoo";
     platforms = platforms.unix;
   };

@@ -11,7 +11,6 @@ manifestoo.overrideAttrs (old: {
   meta = (old.meta or { }) // {
     changelog = "https://github.com/acsone/manifestoo/releases/tag/v${old.version}";
     sourceProvenance = with lib.sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ sbidoul ];
     mainProgram = "manifestoo";
   };
 })

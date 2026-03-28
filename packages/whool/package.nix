@@ -44,7 +44,6 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/sbidoul/whool/releases/tag/v${version}";
     license = licenses.mit;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ sbidoul ];
     mainProgram = "whool";
     platforms = platforms.unix;
   };

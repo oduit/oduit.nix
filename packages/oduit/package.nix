@@ -46,7 +46,6 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/oduit/oduit/releases/tag/v${version}";
     license = licenses.mpl20;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ HolgerNahrstaedt ];
     mainProgram = "oduit";
     platforms = platforms.unix;
   };

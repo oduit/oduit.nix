@@ -199,7 +199,6 @@ rustPlatform.buildRustPackage rec {
     changelog = "https://github.com/odoo/odoo-ls/releases/tag/${version}";
     license = licenses.lgpl3Only;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with flake.lib.maintainers; [ sbidoul ];
     mainProgram = "odoo_ls_server";
     platforms = platforms.unix;
   };

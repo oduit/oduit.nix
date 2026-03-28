@@ -96,14 +96,10 @@ meta = { ... };
 
 Available categories (in display order):
 
-- **AI Coding Agents** - Main AI coding assistants (claude-code, codex, gemini-cli, etc.)
-- **AI Assistants** - General-purpose AI assistants not focused on coding (localgpt, openclaw, etc.)
-- **Claude Code Ecosystem** - Tools specifically for Claude Code (claudebox, catnip, etc.)
-- **ACP Ecosystem** - Agent Control Protocol implementations (claude-code-acp, codex-acp, agent-client-protocol)
-- **Usage Analytics** - Usage tracking and analysis tools (ccusage and variants)
-- **Workflow & Project Management** - Project/spec management tools (backlog-md, beads, openspec, spec-kit)
-- **Code Review** - Code review tools (coderabbit-cli, tuicr)
-- **Utilities** - Other useful tools (coding-agent-search, handy, happy-coder, openskills)
+- **Testing** - 
+- **Packaging** - (whool)
+- **LSP** - LSP (odoo-ls, odoo-lsp)
+- **Utilities** - Other useful tools (oduit, manifestoo, ...)
 
 #### Custom Maintainers
 
