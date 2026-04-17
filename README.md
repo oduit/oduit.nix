@@ -111,6 +111,16 @@
 
 </details>
 <details>
+<summary><strong>odoo-module-migrator</strong> - CLI to migrate Odoo modules between major versions</summary>
+
+- **Source**: source
+- **License**: AGPL-3.0-or-later
+- **Homepage**: https://github.com/OCA/odoo-module-migrator
+- **Usage**: `nix run github:oduit/oduit.nix#odoo-module-migrator -- --help`
+- **Nix**: [packages/odoo-module-migrator/package.nix](packages/odoo-module-migrator/package.nix)
+
+</details>
+<details>
 <summary><strong>oduit</strong> - CLI and library for running, updating, installing, and testing Odoo modules</summary>
 
 - **Source**: source
