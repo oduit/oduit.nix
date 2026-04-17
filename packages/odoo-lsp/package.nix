@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage rec {
     owner = "Desdaemon";
     repo = "odoo-lsp";
     rev = version;
-    hash = "sha256-laGLt9Pw5czRZXzX909ZPVDaNQc+PvpXm0Q1cA9YiQA=";
+    hash = "sha256-hyOGEYQ0WPnFVGZn12mxKFnqcP28CDEkJXwnREgNm3E=";
     fetchSubmodules = true;
   };
 
