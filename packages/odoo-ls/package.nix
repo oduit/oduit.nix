@@ -12,19 +12,19 @@
 }:
 
 let
-  version = "1.2.1";
+  version = "1.3.1";
 
   src = fetchFromGitHub {
     owner = "odoo";
     repo = "odoo-ls";
     rev = version;
-    hash = "sha256-+nx5N3ImjrNDnvgHt/6Vcyw8IBgz9qJQDu2OV9il6xA=";
+    hash = "sha256-v0ao/YxLh40n+QO/ZXwP3K8cZzcD8610QoT0NESbjjY=";
     fetchSubmodules = true;
   };
 
   configSchema = fetchurl {
     url = "https://github.com/odoo/odoo-ls/releases/download/${version}/config_schema.json";
-    hash = "sha256-O5BhiQ1OTUWe4vrXXN4XxunE7tvaesxcC38ax6Q1tEc=";
+    hash = "sha256-BAKvQQ0+Y9AKRi0+OQ7Gq0UvUHICUNx5kZlTgBzumu0=";
   };
 in
 rustPlatform.buildRustPackage rec {
@@ -35,9 +35,6 @@ rustPlatform.buildRustPackage rec {
   buildAndTestSubdir = "server";
 
   postPatch = ''
-    substituteInPlace server/Cargo.toml \
-      --replace-fail 'version = "1.2.0"' 'version = "${version}"'
-
     install -m644 ${./Cargo.lock} server/Cargo.lock
   '';
 
@@ -45,7 +42,7 @@ rustPlatform.buildRustPackage rec {
     lockFile = ./Cargo.lock;
     outputHashes = {
       "lsp-server-0.7.8" = "sha256-M+bLCsYRYA7iudlZkeOf+Azm/1TUvihIq51OKia6KJ8=";
-      "ruff_python_ast-0.0.0" = "sha256-jRH7OOT03MDomZAJM20+J4y5+xjN1ZAV27Z44O1qCEQ=";
+      "ruff_python_ast-0.0.0" = "sha256-Q3xujVNv5i3mgdsjnvgTiPoKmK9aeSgz+2IoVrNur4k=";
     };
   };
 

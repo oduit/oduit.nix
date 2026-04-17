@@ -8,7 +8,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "odoo-lsp";
-  version = "nightly-20260206";
+  version = "nightly-20260328";
 
   src = fetchFromGitHub {
     owner = "Desdaemon";
