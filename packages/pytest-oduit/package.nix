@@ -9,7 +9,7 @@
 }:
 
 let
-  version = "0.4.2";
+  version = "0.4.3";
 
   plugin = python3Packages.buildPythonPackage rec {
     pname = "pytest-oduit";
@@ -17,8 +17,8 @@ let
     pyproject = true;
 
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/9f/a8/5f2608f729dfd75f7091eda98a0e994bc80dfb9687241b4fe1f5a6795abe/pytest_oduit-${version}.tar.gz";
-      hash = "sha256-iPXR9B+yThh8CSPsctc1WEbawbnAVj7j4te+FjlNUR0=";
+      url = "https://files.pythonhosted.org/packages/ab/fe/8dceef595c6f9c661a9ba9b31e2c8707920d9830b118efb84dbcbe194842/pytest_oduit-0.4.3.tar.gz";
+      hash = "sha256-Hxj6qOWMX9GvJeL/0ycYF1CQR7wJMo4ZQ4ZevLUmjk8=";
     };
 
     nativeBuildInputs = [
