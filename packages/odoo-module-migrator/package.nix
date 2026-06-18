@@ -6,7 +6,7 @@
 }:
 
 let
-  rev = "a92aabadd8e08784a00014fa3f1c2b021766fbb3";
+  rev = "32eb96e534727ad4ea482828a2ae0568cbae8319";
   version = "unstable-${lib.substring 0 7 rev}";
 in
 python3Packages.buildPythonApplication rec {
@@ -18,7 +18,7 @@ python3Packages.buildPythonApplication rec {
     owner = "OCA";
     repo = "odoo-module-migrator";
     inherit rev;
-    hash = "sha256-cdLRc/izkR4T3Th1d1Ub6SPO+9cjBlX/t8JTqLxZb34=";
+    hash = "sha256-Ge1Bb95vzaYIZcsr4Yv76RP3ubfTcbaSsXDIb1hPIIE=";
   };
 
   nativeBuildInputs = [

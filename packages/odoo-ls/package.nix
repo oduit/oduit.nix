@@ -12,19 +12,19 @@
 }:
 
 let
-  version = "1.3.1";
+  version = "1.3.3";
 
   src = fetchFromGitHub {
     owner = "odoo";
     repo = "odoo-ls";
     rev = version;
-    hash = "sha256-v0ao/YxLh40n+QO/ZXwP3K8cZzcD8610QoT0NESbjjY=";
+    hash = "sha256-LZfkvn5IzeCYiPUZUvK6Mwgz953/7TbfPAzk+slhxew=";
     fetchSubmodules = true;
   };
 
   configSchema = fetchurl {
     url = "https://github.com/odoo/odoo-ls/releases/download/${version}/config_schema.json";
-    hash = "sha256-BAKvQQ0+Y9AKRi0+OQ7Gq0UvUHICUNx5kZlTgBzumu0=";
+    hash = "sha256-ZJFoHfSQZLgKQbWjmbDe6LlmcKyhfoN6n3XFlYFQzxk=";
   };
 in
 rustPlatform.buildRustPackage rec {

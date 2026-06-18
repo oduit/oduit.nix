@@ -7,12 +7,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "oduit";
-  version = "0.4.3";
+  version = "0.4.7";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-yvXI+hOMpBmMoHls1tdT4MaPv6Xk2dewupigUCnhHqw=";
+    hash = "sha256-PDM5IMLaUX2wqKhQfBJmZCISQkkF93cs1AT8VkBLDPg=";
   };
 
   nativeBuildInputs = [
@@ -21,7 +21,13 @@ python3Packages.buildPythonApplication rec {
     python3Packages.wheel
   ];
 
+  postPatch = ''
+    substituteInPlace oduit/cli/agent/documentation.py \
+      --replace-fail "from typer._click.core import ParameterSource" "from click.core import ParameterSource"
+  '';
+
   propagatedBuildInputs = [
+    python3Packages.click
     python3Packages.pyyaml
     python3Packages.tomli
     python3Packages."tomli-w"

@@ -7,14 +7,14 @@
 }:
 
 let
-  rev = "4bd37324fb5ab4fe8e051eb2b71e5c754d1397fb";
+  rev = "1807dd4b5acacdbe5191ce632992f052a438aada";
   version = "unstable-${lib.substring 0 7 rev}";
 
   src = fetchFromGitHub {
     owner = "initOS";
     repo = "dob";
     inherit rev;
-    hash = "sha256-TkryIm/ItfojplbSJkRxPMxCnE7SO2JlQpPqVztXvK4=";
+    hash = "sha256-EuWyfAzN3F+qs/lrfVhuE99CYRCGuao6YuevWYFAgK0=";
   };
 in
 writeShellApplication {
