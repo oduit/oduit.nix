@@ -7,12 +7,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "oduit";
-  version = "0.4.7";
+  version = "0.4.8";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-PDM5IMLaUX2wqKhQfBJmZCISQkkF93cs1AT8VkBLDPg=";
+    hash = "sha256-Vs8Zy/dFlbZnkgnLmuzJLeIWfWnhn9FgSMkP6uQuj88=";
   };
 
   nativeBuildInputs = [

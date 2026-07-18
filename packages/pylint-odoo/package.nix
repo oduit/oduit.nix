@@ -8,7 +8,7 @@
 }:
 
 let
-  version = "10.0.2";
+  version = "10.0.8";
 
   plugin = python3Packages.buildPythonPackage rec {
     pname = "pylint-odoo";
@@ -16,8 +16,8 @@ let
     pyproject = true;
 
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/4b/c2/0219110040e22a539c6e1bb6676963f45a906b2a9a430cfebd188c31400a/pylint_odoo-${version}.tar.gz";
-      hash = "sha256-RaHg0TanNQFAgGhzfbeklmRZ55ZAdBodcWADR6Hbjlw=";
+      url = "https://files.pythonhosted.org/packages/7b/84/ccc6549b536a0188cec056b4e1c8c53e2ab4d0038d30fec8f521ccb94321/pylint_odoo-${version}.tar.gz";
+      hash = "sha256-zSY7em2jZ1LckepUX7J45Icsgtv1ZYZKrohJzTdc970=";
     };
 
     nativeBuildInputs = [ python3Packages.setuptools ];

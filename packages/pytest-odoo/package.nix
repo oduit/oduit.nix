@@ -8,21 +8,22 @@
 }:
 
 let
-  version = "2.1.3";
+  version = "2.2.0";
 
   plugin = python3Packages.buildPythonPackage rec {
     pname = "pytest-odoo";
     inherit version;
-    format = "setuptools";
+    pyproject = true;
 
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/84/c3/430684a80c0448f241397341d361801c901846c947f79815e639572d3585/pytest_odoo-${version}.tar.gz";
-      hash = "sha256-eI1sxQDTNiSniecp9ByZXo+Cmz7oWWzvDUtIAJgQWOw=";
+      url = "https://files.pythonhosted.org/packages/06/8b/f683d2358a8e8c6ffe2340ad44133ada36b96952c384770d0a79435666cb/pytest_odoo-${version}.tar.gz";
+      hash = "sha256-0kE6moJXJrwyVcML7utxXHIShJVlZeyAReIrKqlOpBY=";
     };
 
     nativeBuildInputs = [
       python3Packages.setuptools
       python3Packages."setuptools-scm"
+      python3Packages.wheel
     ];
 
     propagatedBuildInputs = [ python3Packages.pytest ];
