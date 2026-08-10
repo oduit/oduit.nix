@@ -12,19 +12,19 @@
 }:
 
 let
-  version = "1.3.3";
+  version = "1.5.1";
 
   src = fetchFromGitHub {
     owner = "odoo";
     repo = "odoo-ls";
     rev = version;
-    hash = "sha256-LZfkvn5IzeCYiPUZUvK6Mwgz953/7TbfPAzk+slhxew=";
+    hash = "sha256-u+j1Xw58j++Zaq+IMOsIR9n4Xssba3KrWtpFQxG0hJY=";
     fetchSubmodules = true;
   };
 
   configSchema = fetchurl {
     url = "https://github.com/odoo/odoo-ls/releases/download/${version}/config_schema.json";
-    hash = "sha256-ZJFoHfSQZLgKQbWjmbDe6LlmcKyhfoN6n3XFlYFQzxk=";
+    hash = "sha256-Nk5/lXwYAxyyxL5C9m2F8OnmooUAiKPlYoBsI+TuN7o=";
   };
 in
 rustPlatform.buildRustPackage rec {
@@ -42,6 +42,7 @@ rustPlatform.buildRustPackage rec {
     lockFile = ./Cargo.lock;
     outputHashes = {
       "lsp-server-0.7.8" = "sha256-M+bLCsYRYA7iudlZkeOf+Azm/1TUvihIq51OKia6KJ8=";
+      "oxc-0.127.0" = "sha256-1FQWDHE/g3QSP0wou6ACDuJrpH+e6QV8qIGO6S0fr3M=";
       "ruff_python_ast-0.0.0" = "sha256-Q3xujVNv5i3mgdsjnvgTiPoKmK9aeSgz+2IoVrNur4k=";
     };
   };

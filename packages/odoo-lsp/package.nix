@@ -8,13 +8,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "odoo-lsp";
-  version = "nightly-20260520";
+  version = "nightly-20260725";
 
   src = fetchFromGitHub {
     owner = "Desdaemon";
     repo = "odoo-lsp";
     rev = version;
-    hash = "sha256-ZL4zduMSxXAEeAqDBEmEI6y8QYKqDrQbpBUoEyZoAOo=";
+    hash = "sha256-b6E7q7TCc8D8zcdvmE0en30zCZ1ipro2Ecdg2o6C/B8=";
     fetchSubmodules = true;
   };
 
